@@ -18,3 +18,6 @@ name = "Saurabh"
 age = 20
 is_below_18 = False
 print(f"My name is {name} and my age is {age} and I am below 18 : {is_below_18}")
+
+print(round(5 / 2, 2))  # 2.5
+print("{:.2f}".format(5 / 2)) # 2.50 
