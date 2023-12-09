@@ -22,3 +22,5 @@ print('''
       Can write anything in between as much as you want.
       In multiple lines.
       ''')
+print('Aren\'t you a little short for a storm trooper?') # backslash before ' or " , tells to ignore that one and its part of string 
+print("What is a \"chopper\"?")
