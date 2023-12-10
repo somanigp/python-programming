@@ -16,6 +16,12 @@ print(l1[::-1]) # reverse a list
 
 l1[0] = 3 # change element of a list 
 print(l1)
+# add element to a list 
+l = []
+l += "1" # only with strings
+l += "2"
+print(l) 
+
 l1.append("d") # add element to the end of a list 
 print(l1)
 l1.insert(3, "e") # add element to the 3rd position of a list , the rest of elements will be shifted to the right 
