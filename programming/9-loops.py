@@ -49,7 +49,7 @@ for num in range(1,11,3): # step by 3 - 1 4 7 10
 for num in range(10,1): # will not print anything 
   print(num)
 
-for num in range(10,0,-1): # reverse order, excludes 0
+for num in range(10,0,-1): # decreasing order, excludes 0
   print(num)
 
 target = int(input("Give a target")) 
