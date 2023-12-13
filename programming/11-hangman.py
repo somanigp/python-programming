@@ -14,14 +14,15 @@ for _ in range(5): # Can use _ if not using the variable
     print("Hi")
 
 # Game Code
-import my_module_eleven # importing module which contains words & hangman
+# import my_module_eleven # importing module which contains words & hangman
 import random
 
 no_of_chances = 6
 print('Welcome to Hangman!')
 
 # Selecting a Random Word 
-random_word = random.choice(my_module_eleven.word_list)
+from my_module_eleven import word_list, hangman # importing module which contains words & hangman. can also import like this -> no need to import whole module
+random_word = random.choice(word_list)
 
 # Creating Selected and Unselected list of the word
 list_of_selected_word = list(random_word)
@@ -50,7 +51,7 @@ while no_of_chances >= 0:
   else:
     list_of_already_selected_letters.add(guessed_letter)  # add element in a set
     no_of_chances -= 1
-    print(my_module_eleven.hangman[hangman_char]) # using imports
+    print(hangman[hangman_char]) # using imports
     hangman_char += 1
     if no_of_chances >= 0:
       print("Wrong guess! You have", no_of_chances, "chances left.")
