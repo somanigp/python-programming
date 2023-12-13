@@ -7,9 +7,9 @@
 import random # random module - which is used to generate pseudo-random numbers for various probabilistic distributions.
 
 
-import 7-my_module # import a module - module is a package. module contains a bunch of functions and constants , etc. 
+import my_module_seven # module name can't start with a number # import a module - module is a package. module contains a bunch of functions and constants , etc. 
 
-print(7-my_module.x)
+print(my_module_seven.x)
 
 print(random.randrange(1,10,8)) # int excludes 10, step difference betn numbers generated - thats why can only generate 1 or 9 
 # random is a module - module is a package. module contains a bunch of functions.
