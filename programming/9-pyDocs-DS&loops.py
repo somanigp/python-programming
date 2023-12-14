@@ -91,7 +91,7 @@ for x,y,z in l1:
   print(x,y,z)
   
 
-# Sets  - unordered,unique, iterable
+# Sets  - unordered meaning position doesnt matter,unique, iterable
 print()
 print("Sets".upper())
 aSet = set() # an empty set 
