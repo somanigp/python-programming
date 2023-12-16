@@ -18,9 +18,13 @@ l1[0] = 3 # change element of a list
 print(l1)
 # add element to a list 
 l = []
-l += "1" # only with strings
+l += "1" # only with strings , this is equivalent to extend 
 l += "2"
 print(l) 
+
+l = []
+l10 = [11]
+l += l10 # += is extends which adds 2 lists
 
 l1.append("d") # add element to the end of a list 
 print(l1)
@@ -30,6 +34,8 @@ print(l1)
 x = l1.pop(1) # remove element from that index from the list 
 print(x)
 print(l1)
+
+# list.remove(ele) - remove first occurence of that element
 
 l1.clear() # remove all elements from a list 
 print(l1) # [] 

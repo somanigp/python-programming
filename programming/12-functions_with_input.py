@@ -53,3 +53,11 @@ def prime_checker(number):
 #     print("It's a prime number.")
 #   else:
 #     print("It's not a prime number.")  
+
+def add1_remove2(list1): # functions can affect or alter lists
+  list1.append(1)
+  list1.remove(2)
+  
+l1 = [2]
+add1_remove2(l1)
+print(l1)
