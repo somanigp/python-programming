@@ -22,7 +22,7 @@ print(f"average height = {round(total_heigth/len(student_heights))}")
 
 # student_scores.sort() -> acsending order(small to big)
 
-# student_scores.sort(reverse=True) -> desending order(small to big)
+# student_scores.sort(reverse=True) -> desending order(big to small)
 
 student_scores = input("Give Scores").split()
 for n in range(0, len(student_scores)):
@@ -46,7 +46,7 @@ for num in range(1,10): # excludes 10
 for num in range(1,11,3): # step by 3 - 1 4 7 10
   print(num)
 
-for num in range(10,1): # will not print anything 
+for num in range(10,1): # will not print anything **
   print(num)
 
 for num in range(10,0,-1): # decreasing order, excludes 0

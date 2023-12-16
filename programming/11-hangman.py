@@ -3,7 +3,7 @@
 # Notes :
 x = "abcd"
 print('a' in x) # True - check if a letter exist in a string
-l1 = list(x) # convert string to list
+l1 = list(x) # convert string to list - when there is no spaces in strings
 print(l1)
 l2 = ["_"] * 5 # create list of "_" 5 times 
 print('a' in l1) # search a element in a list 
@@ -47,7 +47,7 @@ while no_of_chances >= 0:
     print('Correct Guess!!')
     print(list_of_unselected_word)
     if "_" not in list_of_unselected_word: # opposite of 'in' is 'not in'
-      break # Will take out of while loop 
+      break # Will take out of while loop - for this inner most loop is while 
   else:
     list_of_already_selected_letters.add(guessed_letter)  # add element in a set
     no_of_chances -= 1

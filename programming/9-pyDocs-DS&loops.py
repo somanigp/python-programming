@@ -100,7 +100,7 @@ aSet = {1,2,3,4,5,6,7,8,9} # set of integers
 print(aSet)
 
 # Set Comprehension
-a = set('abracadabra')
+a = set('abracadabra') # create a set(unique letters) from a string 
 b = set('alacazam')
 print(a)                             # unique letters in a
 print(b)
@@ -111,7 +111,7 @@ print(a ^ b)                         # letters in a or b but not both
 a = {x for x in 'abracadabra' if x not in 'abc'}
 
 
-# Dictionary
+# Dictionary - unordered
 print()
 print("Dictionary".upper())
 users = {'Hans': 'inactive', 'govind': 'active', 'raksha': 'active'} 
@@ -124,7 +124,7 @@ print(users.keys())
 # .values() - returns a list of values
 for user, status in users.copy().items(): # iterate over k,v pairs at once, this also alters the original dictionary
     if status == 'inactive':
-        del users[user] # delete items in a dictionary
+        users.pop(user) # delete items in a dictionary
 
 print(users)
 
@@ -182,7 +182,7 @@ for n in range(2, 10):
   for x in range(2, n):
       if n % x == 0:
           print(n, 'equals', x, '*', n//x)
-          break
+          break # if break is there it doesnt go to else part
   else:
       # loop fell through without finding a factor
       print(n, 'is a prime number')

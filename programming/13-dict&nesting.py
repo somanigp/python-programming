@@ -115,6 +115,8 @@ complex_travel_log = {
   }
 }
 
+# NOTE: list is ordered -> search by position
+# NOTE: dict is unordered -> search by key
 print(complex_travel_log["France"]["cities_visited"][1]) # get items in nested , use strings, 'key' values 
 complex_travel_log["France"]["cities_visited"][1] = "Brussels" # change items in nested , use strings, 'key' values 
 print(complex_travel_log["France"]["cities_visited"][1]) 

@@ -19,7 +19,7 @@ def my_function(x): # scope of x is only within the function
   return "Hello " + x
 
 # Calling the function
-x = my_function("John") 
+x = my_function("John") # it will take the latest definition of my_function
 print(x)
 
 # ** all three functions have the same name like variables , the one recently defined will be used
