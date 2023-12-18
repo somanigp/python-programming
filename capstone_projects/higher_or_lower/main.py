@@ -28,6 +28,8 @@ def higher_or_lower():
       print(f"You're right! Current score: {no_of_correct}.")
     compareB = random.choice(game_data)
     game_data.append(compareA) # adding again so doesnt give error when deleting again
+    if compareA == compareB: # If both are same
+        compareB = random.choice(game_data)
     print(f"Compare A: {compareA['name']}, a {compareA['description']}, from {compareA['country']}")
     print(vs)
     print(f"Compare B: {compareB['name']}, a {compareB['description']}, from {compareB['country']}")
@@ -35,7 +37,7 @@ def higher_or_lower():
     if user_input == compare(compareA,compareB,user_input):
       no_of_correct += 1 
       clear()
-      game_data.pop(game_data.index(compareA))
+      game_data.pop(game_data.index(compareA)) # checks if the dictionary is there in the list
       game_data.pop(game_data.index(compareB))
       compareA = compareB
     elif compare(compareA,compareB,user_input) == 0:

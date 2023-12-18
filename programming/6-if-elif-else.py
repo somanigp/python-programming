@@ -104,3 +104,8 @@ str1 = "abababadsidjei"
 print(str1.count("a")) # no of chars in the string 
 print(str1.count("a", 1, 5)) # no of chars in the string from index 1 to 5
 print("SPD".lower()) # prints the lower case of the string
+
+# ternary operator
+age = 20
+status = "Adult" if age >= 18 else "Minor"
+print(status)  # Output: "Adult"
