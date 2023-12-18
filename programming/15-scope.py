@@ -58,6 +58,11 @@ while x < 11:
 
 print(new_value)
 
+for i in range(5):
+  i = 10
+
+print(i)
+
 # MOdifying global scope
 # Dont use same name for local and global variables 
 
@@ -78,7 +83,7 @@ x1 = 1
 def x3():
   print(x1) # can print it 
   # x1 += 2 - will give error 
-  return x1 + 1 # if global variables used directly in return statement then it works. 
+  return x1 + 1 # if global variables used directly in return statement then it works. As its not altering the value of x1 but just using x1
 
 print(x3())
 
