@@ -44,9 +44,9 @@ def check_if_report(user_selection,resources):
     return [coffee_available, water_available, 1000 ]
 
 
-money = 0
+money = 0  # will keep getting updated in while loop and we dont need to reset it
 machine_on = True
-resources = {
+resources = {  # will keep getting updated in while loop and we dont need to reset it
     "coffee": 100,
     "water": 300,
     "milk": 200,
