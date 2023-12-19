@@ -1,0 +1,13 @@
+Procedural Programming - Working from top to bottom , going after task to task and gets confusing
+OOPs - Each reusable module does it own thing and all comes together. We manage different things which do things of their own.
+
+In OOPs :
+    1. We try to modal real world objects.
+    2. In order to modal - needs 2 things : what it has (Attributes - This is a variable associated with an object/
+    Variable associated with the modal) and does (Methods - defined by functions )
+    3. Multiple versions from the same blueprint we can generate - objects
+So Type - Class (Blueprint) and  Objects ( Individual Objects generated from class)
+
+Syntax
+car = CarBluePrint() # First letter of each word capitalized ( Pascal Case ) - Activates construction of the object
+from blue-print
