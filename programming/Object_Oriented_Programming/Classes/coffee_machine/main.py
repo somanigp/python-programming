@@ -7,10 +7,11 @@ from money_machine import MoneyMachine
 # change the attributes of these objects in while loop. Thus these objects data will keep changing. If we create another
 # CoffeeMaker it will have resources of its own and we can change those resources and it wont affect below coffeeMaker.
 
-
+# Object created and stored in these variables
 menu_created = Menu()  # Created a menu object , The constructor during initialization only puts 3 objects of MenuItem
 # in the Menu Object created. Thus our Menu object menu_created has 3 MenuItems already.
-coffee_maker_created = CoffeeMaker()  # created a object of CoffeeMaker class
+coffee_maker_created = CoffeeMaker()  # created a object of CoffeeMaker class. # we can name the variable money_machine
+# also which is the name of module we imported
 money_machine_created = MoneyMachine()  # created a object of MoneyMachine class
 
 is_on = True
@@ -22,9 +23,9 @@ while is_on:
         is_on = False
     elif choice == "report":
         coffee_maker_created.report()  # We created a new coffee maker at top and this is its( this objects
-        # 'coffee_maker_created') current report.
+        # 'coffee_maker_created') current report. Current amt of resources in this machine.
         money_machine_created.report()  # This is a report for object 'coffee_maker_created' only which we created at
-        # start.
+        # start. The current amt of money in this machine
     else:
         drink = menu_created.find_drink(choice)  # returns an object of MenuItem class, which has name, cost and
         # ingredients. Basically functions creates a new object of MenuItem Class for 'choice' option and returns that.
