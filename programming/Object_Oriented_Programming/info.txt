@@ -11,3 +11,5 @@ So Type - Class (Blueprint) and  Objects ( Individual Objects generated from cla
 Syntax
 car = CarBluePrint() # First letter of each word capitalized ( Pascal Case ) - Activates construction of the object
 from blue-print
+
+JSON: JavaScript Object Notation

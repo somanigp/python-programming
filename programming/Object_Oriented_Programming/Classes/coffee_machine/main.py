@@ -2,6 +2,10 @@ from menu import Menu, MenuItem
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
 
+# print(MoneyMachine.CURRENCY) Accessing Class attribute , it's not the attribute of the object but class itself
+# MoneyMachine.CURRENCY = "|"  # Can change it locally , if alternated it will affected all the objects which use that
+# class attribute in this file AFTER this change
+# print(MoneyMachine.CURRENCY)
 
 # NOTE :  All 3 Objects are created here with their attributes set here, all the changes done to these 3 objects can
 # change the attributes of these objects in while loop. Thus these objects data will keep changing. If we create another
