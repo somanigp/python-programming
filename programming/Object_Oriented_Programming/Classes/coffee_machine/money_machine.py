@@ -1,6 +1,6 @@
 class MoneyMachine:
 
-    CURRENCY = "$"
+    CURRENCY = "$" # Class variables , can be accessed by all instances of the class, but accessed through class.variable and not obect.variable
 
     COIN_VALUES = {
         "quarters": 0.25,

@@ -54,3 +54,25 @@ print(user_1.followers)
 print(user_2.following)
 
 
+# NOTE : In Python, a class cannot have multiple constructors in the same way as some other programming languages (like Java or C++) where method overloading allows different constructors to have different signatures.
+
+# class MyClass:
+#     def __init__(self, param1=None, param2=None):
+#         if param1 is None and param2 is None:
+#             # Default initialization
+#             self.param1 = 0
+#             self.param2 = 0
+#         else:
+#             # Custom initialization
+#             self.param1 = param1
+#             self.param2 = param2
+
+# # Creating objects with different initialization options
+# obj1 = MyClass()  # Initializes with default values (0, 0)
+# obj2 = MyClass(10)  # Initializes with param1=10 and param2=None
+# obj3 = MyClass(20, 30)  # Initializes with param1=20 and param2=30
+
+# # Accessing object attributes
+# print(obj1.param1, obj1.param2)  # Output: 0 0
+# print(obj2.param1, obj2.param2)  # Output: 10 0
+# print(obj3.param1, obj3.param2)  # Output: 20 30

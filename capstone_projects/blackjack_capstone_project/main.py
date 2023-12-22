@@ -126,9 +126,6 @@ def blackjack():
     play_again()
 
 # Start Application
-if input("Do you wanna play blackjack? y or n :").lower() == "y":
-  blackjack()
-else:
-  print("Thank you!!")
+play_again()
 
   

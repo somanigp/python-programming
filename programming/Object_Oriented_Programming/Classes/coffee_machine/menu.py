@@ -1,3 +1,4 @@
+# Can define 2 classes in a file , then import 2 as well
 class MenuItem:
     """Models each Menu Item."""
     def __init__(self, name, water, milk, coffee, cost):

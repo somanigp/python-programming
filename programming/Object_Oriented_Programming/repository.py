@@ -11,6 +11,7 @@ from prettytable import * # select 'go to' in settings and see implementations, 
 table = PrettyTable()  # Creating a object of class  PrettyTable from prettytable package.
 
 print(table.field_names)  # empty
+# NOTE: Attributes can be changed outside of objects methods , but avoid it generally. Use methods to change attributes, instead of doing directly
 table.field_names = ["City name", "Area", "Population", "Annual Rainfall"]  # Adding column names to attribute field_names
 # of 'x'
 table.add_row(["Adelaide", 1295, 1158259, 600.5])  # calling a method of our object 'x'
