@@ -61,3 +61,10 @@ def add1_remove2(list1): # functions can affect or alter lists
 l1 = [2]
 add1_remove2(l1)
 print(l1)
+
+def change(ele):
+    ele = [10]  # Assigning doesnt work but append,pop and other functions work.
+
+x = [5]
+change(x)
+print(x)

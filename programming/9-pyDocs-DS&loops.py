@@ -108,7 +108,7 @@ print(a - b)                         # letters in a but not in b
 print(a | b)                         # letters in a or b or both
 print(a & b)                         # letters in both a and b
 print(a ^ b)                         # letters in a or b but not both
-a = {x for x in 'abracadabra' if x not in 'abc'}
+a = {x for x in 'abracadabra' if x not in 'abc'} # For dict we put {x:x**2 for x in range(1,11)} , we use x:x**2
 
 
 # Dictionary - unordered
@@ -172,7 +172,7 @@ for i in range(3):
 class MyEmptyClass:
   pass
 
-while True:
+while True:  # Infinite loop 
   pass
 
 # else statement is used to execute code when the condition is false
