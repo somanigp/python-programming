@@ -76,3 +76,26 @@ print(user_2.following)
 # print(obj1.param1, obj1.param2)  # Output: 0 0
 # print(obj2.param1, obj2.param2)  # Output: 10 0
 # print(obj3.param1, obj3.param2)  # Output: 20 30
+
+
+# NOTE: When it shows (self,distance) -> it means it only takes one argument i.e. distance.
+# NOTE: When it shows (self) -> No argument needed
+
+# **** NOTE ****
+# You can change attributes of an object through methods inside a function like func1, but not directly change
+# attribute inside a function which is not object's method.
+
+# class Demo:
+#   def __init__(self):
+#     self.x = 10
+#
+#
+# demo = Demo()
+# print(demo.x)
+#
+# def func1():
+#   demo.x = 20
+#
+# print(demo.x)  # Still prints 10
+# demo.x = 30
+# print(demo.x) # 30

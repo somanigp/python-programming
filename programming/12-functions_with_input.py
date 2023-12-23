@@ -3,7 +3,7 @@ import math # math module for mathematical calculation
 # Arguments and Parameters
 my_name = "Govind"
 
-def greet(name): # name is a parameter ( name of the data )
+def greet(name: str): # name is a parameter ( name of the data )
   print(my_name) # we can access the variable defined outside the function as function and variable are in the same SCOPE.                
   print("Hello, " + name)
 
@@ -68,3 +68,9 @@ def change(ele):
 x = [5]
 change(x)
 print(x)
+
+
+# NOTE: How to make sure only specific type of data is passed into a function
+def only_int_input(only_int: int):  # Only takes int input
+  return only_int+10
+
