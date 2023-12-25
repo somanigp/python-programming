@@ -13,7 +13,7 @@ screen = Screen()
 screen.setup(width=500, height=400)  # Setting screen size
 # In screen height = 400, so y-axis goes from 200 to -200
 # In screen width = 500, so x-axis goes from 250 to -250
-colors = ["red", "orange", "yellow", "green", "blue", "purple"]
+colors_and_turtle_names = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 is_race_on = False
 user_choice = screen.textinput(title="Turtle Race", prompt="Which color will win?")
@@ -28,7 +28,7 @@ list_of_turtles = []  # When we need to create multiple objects and work with th
 for i in range(6):
     list_of_turtles.append(Turtle(shape="turtle"))  # creating a new Turtle object and storing object in a list
     turtle_is = list_of_turtles[i]  # using object just stored in a list
-    turtle_is.color(colors[i])  # putting each with a diff color from 'colors' list
+    turtle_is.color(colors_and_turtle_names[i])  # putting each with a diff color from 'colors' list
     turtle_is.penup()  # permanently up
     turtle_is.goto(x=-230,y=y_axis)
     y_axis += 30  # placing the next turtle above a bit.
@@ -63,10 +63,10 @@ while is_race_on:  # Keep moving all turtles forward again and again.
             is_race_on = False  # end the race
             break  #
 
-if user_choice == colors[who_won]:  # color index and turtle index are correspondingly.
-    print(f"You Won, The winner is {colors[who_won]}")
+if user_choice == colors_and_turtle_names[who_won]:  # color index and turtle index are correspondingly.
+    print(f"You Won, The winner is {colors_and_turtle_names[who_won]}")
 else:
-    print(f"You Lose, The winner is {colors[who_won]}")
+    print(f"You Lose, The winner is {colors_and_turtle_names[who_won]}")
 
 # The state of color attribute of tim is green and so forth.
 # tim.shape("turtle")

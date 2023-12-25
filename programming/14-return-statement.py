@@ -90,7 +90,7 @@ def subtract(n1,n2):
   return n1-n2
 
 operations = {
-  "+": add, # add function in a dictionary ***
+  "+": add, # add function in a dictionary ***, function is passed an argument thus no parenthesis
   "-": subtract
 }
 

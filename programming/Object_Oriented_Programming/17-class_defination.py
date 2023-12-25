@@ -57,7 +57,7 @@ print(user_2.following)
 # NOTE : In Python, a class cannot have multiple constructors in the same way as some other programming languages (like Java or C++) where method overloading allows different constructors to have different signatures.
 
 # class MyClass:
-#     def __init__(self, param1=None, param2=None):
+#     def __init__(self, param1=None, param2=None):  # If passing a value as argument this(param1=None) gets overriden.
 #         if param1 is None and param2 is None:
 #             # Default initialization
 #             self.param1 = 0
@@ -99,3 +99,51 @@ print(user_2.following)
 # print(demo.x)  # Still prints 10
 # demo.x = 30
 # print(demo.x) # 30
+
+
+# NOTE:
+# class Demo:
+#
+#   class_variable = 10  # Class variable
+#
+#   def __init__(self, param1 = 0, param2 = 0):  # Setting default values if None passed
+#     self.x = param1
+#     self.y = param2
+
+#   def x_is(self):  # self - object method , and not class
+#     return self.x
+
+#   def hello(self):
+#     print("hello" + self.class_variable)  # using class_variable.
+
+#   def hello_2():
+#     print("hello2")
+
+#   def own_input(self, demo_item: 'Demo'):  # demo_item parameter should only take input which is of the same class ie demo. NOTE : '' not needed when there is any other class as requirement.
+#     return demo_item.x
+
+# demo1 = Demo()
+# print(demo1.x)
+# print(demo1.y)
+# print(demo1.x_is())
+# # Demo.x_is() - error
+# demo1.hello()
+# # Demo.hello() - error
+# Demo.hello_2() # Works , method of class
+# Demo.class_variable # Works , class variable
+
+# demo2 = Demo(9)
+# print(demo2.x)
+# print(demo2.y)
+
+# demo3 = Demo(8,9)
+# print(demo3.x)
+# print(demo3.y)
+
+# # O/P:
+# # 0
+# # 0
+# # 9
+# # 0
+# # 8
+# # 9

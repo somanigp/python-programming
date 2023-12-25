@@ -9,7 +9,7 @@ def clear():  # function to clear terminal screen
 
 import random
 
-def compare(compareA,compareB,user_input):
+def compare(compareA,compareB):
   if compareA['follower_count'] > compareB['follower_count'] :
     return "A"
   elif compareA['follower_count'] == compareB['follower_count'] :

@@ -23,6 +23,11 @@ queue.popleft()                 # The first to arrive now leaves
 queue.popleft()                 # The second to arrive now leaves
 print(queue)                    # Remaining queue in order of arrival
 
+
+# NOTE: 
+# list.pop() -> removes last element
+# list.pop(index) -> removes element at index
+
 l3 = [1,2,3,4,5,6,7,8,9]
 del l3[:4] # use del with list to delete elements
 # print(l3)
@@ -64,7 +69,10 @@ print()
 print("TUPLES")
 t = 12345, 54321, 'hello!' # can define tuples like this
 t2 = (1,2,3,4,5) # or this
-print(t[0],t)
+print(t[0],t)  # Tuples are ordered , accessed thorugh index
+
+list_is = [1,2,3,4,5]
+tuple_is = tuple(list_is) # convert list to tuple
 
 # Tuples may be nested:
 u = t, (1, 2, 3, 4, 5)
@@ -172,7 +180,7 @@ for i in range(3):
 class MyEmptyClass:
   pass
 
-while True:  # Infinite loop 
+while False:  
   pass
 
 # else statement is used to execute code when the condition is false

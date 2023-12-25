@@ -16,7 +16,7 @@ class CoffeeMaker:
     def is_resource_sufficient(self, drink): # Checks if to make the said drink, this object has sufficient resources
         """Returns True when order can be made, False if ingredients are insufficient."""
         can_make = True
-        for item in drink.ingredients:
+        for item in drink.ingredients:  # Iterating through keys of a dict
             if drink.ingredients[item] > self.resources[item]:
                 print(f"Sorry there is not enough {item}.")
                 can_make = False

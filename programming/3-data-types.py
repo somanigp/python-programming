@@ -58,3 +58,8 @@ print(bool(num2))  # Output: <class 'bool'> - type check true
 # int + float = float
 print(12.5/2) # float
 print(2/0.5) # float 
+
+# A variable can also be None
+x = None
+print(x) # None
+print(type(x)) # <class 'NoneType'>

@@ -118,7 +118,7 @@ def backward_movement(turtle_object, distance):
 
 directions = ["right", "left", "forward", "backward"]
 dict_of_directions = {
-    "right": right_movement,  # No need to add parameters here.
+    "right": right_movement,  # No need to add parenthesis as it is a function as an argument here.
     "left": left_movement,
     "forward": forward_movement,
     "backward": backward_movement

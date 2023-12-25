@@ -3,6 +3,7 @@ import math # math module for mathematical calculation
 # Arguments and Parameters
 my_name = "Govind"
 
+# : str,int,bool,float,list,tuple,dict,set,None,Custom_Class_Name - type of data as input if you wanna fix input
 def greet(name: str): # name is a parameter ( name of the data )
   print(my_name) # we can access the variable defined outside the function as function and variable are in the same SCOPE.                
   print("Hello, " + name)
@@ -55,7 +56,7 @@ def prime_checker(number):
 #     print("It's not a prime number.")  
 
 def add1_remove2(list1): # functions can affect or alter lists
-  list1.append(1)
+  list1.append(1)  # Only through list methods can we alter it , if we try to change it directly(affect attributes) it wont work.
   list1.remove(2)
   
 l1 = [2]
