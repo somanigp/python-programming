@@ -11,7 +11,8 @@ LEFT = 180
 class Snake:
     def __init__(self):
         self.snake_body = []
-        # NOTE: Calling this function during the initialization of object. Below function is executed when function is called.
+        # NOTE: Calling this function during the initialization of object. Below function is executed when
+        # function is called.
         self.initialize_body()  # Initialize body with 3 Turtle objects.
         self.head = self.snake_body[0]
 
@@ -30,6 +31,18 @@ class Snake:
             # anywhere. And when the screen is available to the object, it will show there.
             x_axis -= 20  # The length of each square is 20. So each should be 20 units behind the next.
             # See image attached.
+
+    def add_segment(self, position):
+        new_segment = Turtle("square")
+        new_segment.penup()
+        new_segment.color(SNAKE_COLOR)
+        new_segment.goto(position)
+        self.snake_body.append(new_segment)
+
+    def extend(self):
+        """Add a new snake_part to the snake"""
+        # As move() is called at this point, it won't give any errors.
+        self.add_segment(self.snake_body[-1].position())  # -1 : index of last element, position() - gives x,y co-or.
 
     def move(self):
         """Method to move snake forward by 20 units, only once."""
@@ -69,7 +82,3 @@ class Snake:
         if int(self.head.heading()) == UP:
             return
         self.head.setheading(DOWN)
-
-
-
-

@@ -65,6 +65,8 @@ vec = [-4, -2, 0, 2, 4]
 list_1 = [x for x in vec if x >= 0] # if to make list 
 
 # Tuples - are immutable and ordered
+# NOTE: Slicing works for tuples and lists and all other orders class like strings.
+# So we can slice a tuple to get a part of it.
 print()
 print("TUPLES")
 t = 12345, 54321, 'hello!' # can define tuples like this

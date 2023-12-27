@@ -7,14 +7,14 @@
 # TODO:  When game should end ( collision with wall )
 # TODO:  When game should end ( snake collided with its own tale )
 
-from turtle import Turtle, Screen
+from turtle import Screen
 import time
 from snake import Snake  # Importing snake class
+from food import Food
+from scoreboard import Scoreboard
 # time.sleep(delay_in_secs) # Adds delay
 
 SCREEN_COLOR = "#D2E3C8"
-# SNAKE_COLOR = "#4F6F52"
-FOOD_COLOR = ""
 
 # Screen Setup
 my_screen = Screen()
@@ -29,7 +29,8 @@ my_screen.tracer(0)  # Turn turtle animation on(1)/off(0). Here using function t
 # NOTE: All parts related to snake behavior and appearance, move it to a separate class.
 # snake object creation
 snake = Snake()
-
+food = Food()
+scoreboard = Scoreboard()
 # Enable Listener
 my_screen.listen()
 
@@ -99,11 +100,49 @@ game_on = True
 #           # Repeat it till all the tail (body except head) also moves forward and takes place of the part ahead of it.
 
 # Move the snake forward. - Tail follows the head.
+# while game_on:
+#     # Delay for 0.1 sec and refresh the screen
+#     my_screen.update()
+#     time.sleep(0.1)
+#     snake.move()  # Method to move snake forward by 20 units, only once
+#
+#     # Detect collision with food using distance method.
+#     # Distance method of turtle: Return the distance from the turtle to food object or (x,y)
+#     # Distance between the head of snake and food should be zero.
+#     # NOTE: distance takes another Turtle object as an input,
+#     # as food is subclass of Turtle, it is valid to put it in distance
+#     if snake.head.distance(food) < 15:  # 15 to keep a buffer
+#         food.hideturtle()  # hide the old food
+#         food = Food()  # create a new food object at some other random place and assign it to 'food' variable
+#         # the next food.hideturtle() will hide the new food object
+
+
 while game_on:
     # Delay for 0.1 sec and refresh the screen
     my_screen.update()
     time.sleep(0.1)
-    snake.move()  # Method to move snake forward by 20 units, only once
+    snake.move()
+    if snake.head.distance(food) < 15:
+        # Changing the way: the same food goes to another random location
+        food.refresh()
+        snake.extend()
+        # NOTE: at this point in snake_body the new segment and last segment are in the same place.
+        # But when the next move() method is called, the now last(new segment) remains in place and the rest of the
+        # snake moves forward, so all gets sorted
+        scoreboard.add_score()
+
+    # Detect snake head collision with wall
+    # When x or y coordinate go above very near wall
+    if abs(snake.head.xcor()) > 290 or abs(snake.head.ycor()) > 290:  # abs(-10) = 10, thus converting to abs value
+        game_on = False
+        scoreboard.game_over()
+
+    # Detect collision with tail
+    # if head collides with any segment in the tail: Game Over
+    for snake_part in snake.snake_body[1:]:  # Each snake_part is a Turtle. Now a new list is from index 1 to end.
+        if snake.head.distance(snake_part) < 10:
+            game_on = False
+            scoreboard.game_over()
 
 
 my_screen.exitonclick()  # NOTE: Only exits when no more command to execute on turtle.
