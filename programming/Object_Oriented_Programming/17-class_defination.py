@@ -21,7 +21,7 @@ class User:  # 'class' Keyword and name in PascalCase. All Class details go insi
     def add_follower(self):  # Self is the first parameter, and it is not an argument needed by user to give.
         self.followers += 1
 
-    def follow(self, user):  # Argument 'user' will be an 'User' object**.
+    def follow(self, user: "User"):  # Argument 'user' will be an 'User' object**.
         user.followers += 1
         self.following += 1
 

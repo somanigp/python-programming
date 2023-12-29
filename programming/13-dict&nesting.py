@@ -172,5 +172,6 @@ while while_continue:
     highest_bidder(main_dict)
 
 
-
+# NOTE: [] - for accessing for list, dict or others
+# () - for functions
 

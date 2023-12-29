@@ -19,6 +19,7 @@ string1 = "Hello"  # string type
 # Sub Strings : slices of strings
 # Indexing : selecting a character in a string
 print(string1[0])  # character of a string can be taken - sub string
+print(string1[-1]) # last element 
 print(string1[0:2])  # slice of a string, the end index is not included
 print(string1[:2])  # slice of a string , from start
 print(string1[2:])  # slice of a string , till end, the start index is included
@@ -56,7 +57,7 @@ print(bool(num1))  # Output: <class 'bool'> - type check false
 print(bool(num2))  # Output: <class 'bool'> - type check true
 
 # int + float = float
-print(12.5/2) # float
+print(12.5/2) # float, division o/p is always float
 print(2/0.5) # float 
 
 # A variable can also be None
