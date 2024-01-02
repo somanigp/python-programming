@@ -44,6 +44,14 @@ class Snake:
         # As move() is called at this point, it won't give any errors.
         self.add_segment(self.snake_body[-1].position())  # -1 : index of last element, position() - gives x,y co-or.
 
+    def reset(self):
+        for snake in self.snake_body:
+            snake.goto(x=1000, y=1000)
+        self.snake_body.clear()  # Clear a list in python, note the objects don't get deleted; they just get removed
+        # or ejected from the list, thus need to relocate the object outside the screen before ejecting them.
+        self.initialize_body()  # Initialize body with 3 Turtle objects.
+        self.head = self.snake_body[0]  # resetting the head
+
     def move(self):
         """Method to move snake forward by 20 units, only once."""
         # Starting from the end and moving each part forward. Last part to second last and so on.

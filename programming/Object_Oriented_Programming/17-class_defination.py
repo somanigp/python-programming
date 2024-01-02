@@ -1,4 +1,10 @@
 # Class Declaration
+# NOTE: **
+from Classes.coffee_machine.coffee_maker import CoffeeMaker  # '.' to navigate when doing imports in .py file
+# from ..higher_or_lower.art import logo  # Cant do this as relative imports are only within packages. To
+# import like this we need to change our project structure into packages.
+
+
 class User:  # 'class' Keyword and name in PascalCase. All Class details go inside this indented
     # pass  # when you want to skip writing code from now.
 

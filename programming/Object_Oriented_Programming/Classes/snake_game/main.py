@@ -116,7 +116,6 @@ game_on = True
 #         food = Food()  # create a new food object at some other random place and assign it to 'food' variable
 #         # the next food.hideturtle() will hide the new food object
 
-
 while game_on:
     # Delay for 0.1 sec and refresh the screen
     my_screen.update()
@@ -134,15 +133,18 @@ while game_on:
     # Detect snake head collision with wall
     # When x or y coordinate go above very near wall
     if abs(snake.head.xcor()) > 290 or abs(snake.head.ycor()) > 290:  # abs(-10) = 10, thus converting to abs value
-        game_on = False
-        scoreboard.game_over()
+        # game_on = False
+        # scoreboard.game_over()
+        # ^ is game_over and below is Reset Game:
+        scoreboard.reset()
+        snake.reset()
 
     # Detect collision with tail
     # if head collides with any segment in the tail: Game Over
     for snake_part in snake.snake_body[1:]:  # Each snake_part is a Turtle. Now a new list is from index 1 to end.
         if snake.head.distance(snake_part) < 10:
-            game_on = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
 
 
 my_screen.exitonclick()  # NOTE: Only exits when no more command to execute on turtle.
