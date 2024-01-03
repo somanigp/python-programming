@@ -56,7 +56,7 @@ class Snake:
         """Method to move snake forward by 20 units, only once."""
         # Starting from the end and moving each part forward. Last part to second last and so on.
         # Tail follows the head.
-        for snake_part_num in range(len(self.snake_body) - 1, 0, -1):
+        for snake_part_num in range(len(self.snake_body) - 1, 0, -1):  # Index 0 is excluded here, so head doesn't move in loop.
             # Positions were fixed during initialization and when adding parts
             x_cor = self.snake_body[snake_part_num - 1].xcor()
             y_cor = self.snake_body[snake_part_num - 1].ycor()
