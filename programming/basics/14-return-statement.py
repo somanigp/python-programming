@@ -42,7 +42,7 @@ def days_in_month(year, month):
 
 # Docstrings - Used to discribe a function , first line after declaration in a function
 def area_of_square(side):
-  """Returns the area of a square""""" # note for string its ''' '''
+  """Returns the area of a square""" # note for string its ''' '''
   return side * side
 
 print(area_of_square.__doc__) # prints the docstring of the function

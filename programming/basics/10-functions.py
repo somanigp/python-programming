@@ -15,7 +15,7 @@ def my_function(name):
 my_function("John") 
 
 # return value
-def my_function(x): # scope of x is only within the function
+def my_function(x) -> str: # return type is str # scope of x is only within the function
   return "Hello " + x
 
 # Calling the function

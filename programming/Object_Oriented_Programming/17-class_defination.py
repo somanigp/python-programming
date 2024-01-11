@@ -94,15 +94,16 @@ print(user_2.following)
 # class Demo:
 #   def __init__(self):
 #     self.x = 10
-#
-#
+
+
 # demo = Demo()
 # print(demo.x)
-#
+
 # def func1():
-#   demo.x = 20
-#
-# print(demo.x)  # Still prints 10
+#   demo.x = 20  # does change the attribute
+
+# func1()
+# print(demo.x) # prints 20
 # demo.x = 30
 # print(demo.x) # 30
 

@@ -11,6 +11,7 @@ count_of_each_fur_color = data["Primary Fur Color"].value_counts()  # Return a S
 # print(type(count_of_each_fur_color))  # <class 'pandas.core.series.Series'>
 
 dict_of_count = count_of_each_fur_color.to_dict()  # converting a series to dict
+# print(dict_of_count)
 
 # Only a certain type of data can be converted to df
 dict_to_convert = {

@@ -5,7 +5,7 @@
 # Strings
 print("STRINGS AND INTS")
 abc = " abc "
-print("##" +abc.strip()+"##") # removes extra space
+print("##" +abc.strip()+"##") # removes extra space and new line
 del abc # to delete an entire variable
 
 #int
