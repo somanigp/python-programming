@@ -25,7 +25,7 @@ while do_continue:
   if (direction.lower() == "encode") or (direction.lower() == "decode"):
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
-    ceaser(text,shift%26,direction) # important as if shift it too large it will make it equivalent to what it was if shift was < 26. Note : 26 is len of alphabet so after 26 shift alphabet repeat
+    ceaser(text,shift%26,direction.lower()) # important as if shift it too large it will make it equivalent to what it was if shift was < 26. Note : 26 is len of alphabet so after 26 shift alphabet repeat
   else:
     print("Give proper response.")
   que = input("Do you wanna continue? Y or N\n").lower()

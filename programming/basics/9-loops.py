@@ -11,7 +11,7 @@ for fruit in fruits: # go through each item in a list
 
 # Input a Python list of student heights
 student_heights = input("Give heigths").split() # input is like and by default it split by place :123 128 981 251 
-for n in range(0, len(student_heights)): # range(a,b) -> b in not included
+for n in range(0, len(student_heights)): # range(a,b) -> b in not included. Iterating through index.
   student_heights[n] = int(student_heights[n]) # convert to int
 total_heigth = 0
 for heigth in student_heights:
@@ -38,7 +38,7 @@ print(f"The highest score in the class is: {highest_number}")
 numbers = [10, 7, 25, 14, 30]
 maximum = max(numbers) # max and min for a list of numbers 
 
-for num in range(10): # exclude 10
+for num in range(10): # exclude 10, starts from 0
     print(num)
 for num in range(1,10): # excludes 10 
   print(num)
@@ -46,7 +46,7 @@ for num in range(1,10): # excludes 10
 for num in range(1,11,3): # step by 3 - 1 4 7 10
   print(num)
 
-for num in range(10,1): # will not print anything **
+for num in range(10,1): # will not print anything **NOTE**
   print(num)
 
 for num in range(10,0,-1): # decreasing order, excludes 0

@@ -1,3 +1,5 @@
+from menu import MenuItem
+
 class CoffeeMaker:
     """Models the machine that makes the coffee"""
     def __init__(self):
@@ -13,7 +15,7 @@ class CoffeeMaker:
         print(f"Milk: {self.resources['milk']}ml")
         print(f"Coffee: {self.resources['coffee']}g")
 
-    def is_resource_sufficient(self, drink): # Checks if to make the said drink, this object has sufficient resources
+    def is_resource_sufficient(self, drink: MenuItem): # Checks if to make the said drink, this object has sufficient resources
         """Returns True when order can be made, False if ingredients are insufficient."""
         can_make = True
         for item in drink.ingredients:  # Iterating through keys of a dict

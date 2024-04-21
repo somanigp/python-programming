@@ -21,3 +21,5 @@ print(f"My name is {name} and my age is {age} and I am below 18 : {is_below_18}"
 
 print(round(5 / 2, 2))  # 2.5
 print("{:.2f}".format(5 / 2)) # 2.50 
+# .2f stands for "floating-point number with two decimal places"
+# uses a colon to specify that the floating-point number should be formatted with two decimal places.

@@ -1,5 +1,6 @@
 num = 5
-if num<10: #if it goes into the first if statement, it will not go into the second if/elif statement
+# With if-elif-else : practice small to big ( smaller scope to larger )
+if num<10: #if it goes into the first if statement, it will not go into the second if/elif statement 
   print("small")
 elif num<20:
   print("medium")
@@ -60,9 +61,7 @@ else:
   
 # Which year do you want to check?
 year = int(input())
-# 🚨 Don't change the code above 👆
 
-# Write your code below this line 👇
 if year % 4 == 0:
   if year % 100 == 0:
     if year % 400 ==0:
@@ -103,7 +102,7 @@ if not False:
 str1 = "abababadsidjei"
 print(str1.count("a")) # no of chars in the string 
 print(str1.count("a", 1, 5)) # no of chars in the string from index 1 to 5
-print("SPD".lower()) # prints the lower case of the string
+print("SPD".lower()) # prints the lower case of the string : lower, upper, title, etc.
 
 # ternary operator
 age = 20

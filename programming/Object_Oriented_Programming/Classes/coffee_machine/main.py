@@ -1,6 +1,18 @@
-from menu import Menu, MenuItem
+from menu import Menu
 from coffee_maker import CoffeeMaker
 from money_machine import MoneyMachine
+
+# Modules and Packages:
+# import Quiz  # Wont work use from Quiz import QuizBrain
+# quizbrain = Quiz.quiz_brain.QuizBrain()
+
+# from Quiz.quiz_brain import QuizBrain # This works
+# quiz = QuizBrain()  
+
+# from csv_and_pandas import main # This works. this imports a module. Use as main.function_name()
+
+# import Quiz  # Works if we have import statement in __init__.py
+# quiz = Quiz.QuizBrain()
 
 # print(MoneyMachine.CURRENCY) Accessing Class attribute , it's not the attribute of the object but class itself
 # MoneyMachine.CURRENCY = "|"  # Can change it locally , if alternated it will affected all the objects which use that

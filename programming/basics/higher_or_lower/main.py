@@ -34,13 +34,13 @@ def higher_or_lower():
     print(vs)
     print(f"Compare B: {compareB['name']}, a {compareB['description']}, from {compareB['country']}")
     user_input = input("Who has more followers? Type 'A' or 'B': \n").upper()
-    if user_input == compare(compareA,compareB,user_input):
+    if user_input == compare(compareA,compareB):
       no_of_correct += 1 
       clear()
       game_data.pop(game_data.index(compareA)) # checks if the dictionary is there in the list
       game_data.pop(game_data.index(compareB))
       compareA = compareB
-    elif compare(compareA,compareB,user_input) == 0:
+    elif compare(compareA,compareB) == 0:
       compareA = compareB 
       no_of_correct += 1 
       clear()

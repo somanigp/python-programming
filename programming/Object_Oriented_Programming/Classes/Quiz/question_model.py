@@ -5,7 +5,7 @@ class Question:
 
 
 # new_question = Question("2+5=7", True)
-# print(Question("2+5=7", "True").answer) # As this is an object creation, it can be created anywhere. it is like
+# print(Question("2+5=7", "True").answer) # True # As this is an object creation, it can be created anywhere. it is like
 # creating any other data type.
 
 

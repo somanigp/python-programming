@@ -1,6 +1,6 @@
 # Operators : 
-# PEMDAS LR
-# () -> ** -> * and / -> + and -
+# PEMDAS LR (E- Exponents)
+# () -> ** (Exponents) -> * and / -> + and -
 # calculation from left to right 
 print(3+4)
 print(3-4)

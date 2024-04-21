@@ -15,7 +15,7 @@ print(abs(-9.55))
 # Lists
 print()
 print("LISTS")
-from collections import deque
+from collections import deque # Imprting just a method
 queue = deque(["Eric", "John", "Michael"]) # Queues - FIFO
 queue.append("Terry")           # Terry arrives
 queue.append("Graham")          # Graham arrives
@@ -29,7 +29,7 @@ print(queue)                    # Remaining queue in order of arrival
 # list.pop(index) -> removes element at index
 
 l3 = [1,2,3,4,5,6,7,8,9]
-del l3[:4] # use del with list to delete elements
+del l3[:4] # use del with list to delete elements . [5, 6, 7, 8, 9]
 # print(l3)
 del l3[:] # delete complete list
 # print(l3)
@@ -109,6 +109,24 @@ print(type(aSet))
 aSet = {1,2,3,4,5,6,7,8,9} # set of integers
 print(aSet)
 
+# Create a set
+my_set = {1, 2, 3, 4, 5}
+
+# Remove an item using remove()
+my_set.remove(3)
+print(my_set)  # Output: {1, 2, 4, 5}
+
+# Remove an item using discard()
+my_set.discard(5)
+print(my_set)  # Output: {1, 2, 4}
+
+# Create a set
+my_set = {1, 2, 3, 4, 5}
+
+# Add an item using add()
+my_set.add(6)
+print(my_set)  # Output: {1, 2, 3, 4, 5, 6}
+
 # Set Comprehension
 a = set('abracadabra') # create a set(unique letters) from a string 
 b = set('alacazam')
@@ -119,7 +137,18 @@ print(a | b)                         # letters in a or b or both
 print(a & b)                         # letters in both a and b
 print(a ^ b)                         # letters in a or b but not both
 a = {x for x in 'abracadabra' if x not in 'abc'} # For dict we put {x:x**2 for x in range(1,11)} , we use x:x**2
+# NOTE: 
+a = {1,2,3,4,7}
+b = {1,2,3,4,5}
+print(b-a) # {5}
+print(a^b) # {5,7}
 
+a = [x for x in 'abracadabra' if x not in 'abc'] # this will give list
+print(a)
+
+print('a' in 'abc') # True
+print('ab' in 'abc') # True NOTE**
+print('a' in ['a','b']) # True
 
 # Dictionary - unordered
 print()
@@ -144,6 +173,7 @@ for user, status in users.items():
     if status == 'active':
         active_users[user] = status # add items in dictionary 
 
+# Convert Dict to list
 l2 = list(active_users)
 print(l2) # removes values and keep only keys 
 

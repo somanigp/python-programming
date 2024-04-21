@@ -12,7 +12,7 @@ import turtle
 # Installing Modules come in. Install from PyPi. in Interpreter Settings.
 
 # This module helps draw graphics onto the screen
-from turtle import Turtle, Screen  # One module/package can have many classes to import
+from turtle import Turtle, Screen  # One module/package can have many classes/Functions/Variables to import
 import heroes as h  # Gives a suggestion to install the package.
 import random
 hero_name = h.gen()
@@ -76,7 +76,7 @@ def generate_random_color():
 def draw_shape(sides, turtle_object: Turtle):  # turtle_object can only be of type/class Turtle
     random_color = generate_random_color()
     turtle_object.pencolor(random_color)
-    angle = 360 / sides  # Outer angle of each side.
+    angle = 360 / sides  # Outer angle of each side with respect to a stright line.
     for _ in range(sides):  # for no_of_sides=3 , range[0,1,2] , so len(range) = 3
         turtle_object.forward(50)  # can directly use timmy_the_turtle.forward(50), but not good practice.
         turtle_object.left(angle)  # 180-60 or 360/3, that is turn by outer angle.
@@ -125,7 +125,7 @@ dict_of_directions = {
 }
 
 
-def random_walk(dist, turtle_object, no_of_times):
+def random_walk(dist, turtle_object: Turtle, no_of_times):
     """Random Walk Function"""
     while no_of_times > 0:
         random_color = generate_random_color()

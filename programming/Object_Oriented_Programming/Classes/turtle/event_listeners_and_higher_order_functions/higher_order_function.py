@@ -38,6 +38,8 @@ def add(n1,n2):
 def subtract(n1, n2):
     return n1-n2
 
+# x = {"add": add, "subtract": subtract}
+# print(x["add"](1, 2)) # Output: 3
 
 # Higher Order Function : A function which can take other functions as input.
 def calculate(n1, n2, func, hello_func_replaced): # This is a higher order function

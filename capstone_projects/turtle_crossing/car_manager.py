@@ -13,7 +13,7 @@ def level_up_speed():
 
 class CarManager:
     def __init__(self):
-        self.car_collection = []
+        self.car_collection: list[Turtle] = []  # List of turtle objects
         self.generate_car()
 
     def generate_car(self):

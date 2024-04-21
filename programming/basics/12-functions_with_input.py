@@ -55,7 +55,7 @@ def prime_checker(number):
 #   else:
 #     print("It's not a prime number.")  
 
-def add1_remove2(list1): # functions can affect or alter lists
+def add1_remove2(list1: list): # functions can affect or alter lists
   list1.append(1)  # Only through list methods can we alter it , if we try to change it directly(affect attributes) it wont work.
   list1.remove(2)
   
@@ -70,7 +70,12 @@ x = [5]
 change(x)
 print(x)
 
+# In Python, when you pass a list as an argument to a function, you're passing a reference to the list object. In the first example, `add1_remove2` modifies the contents of the list object referred to by `l1`, hence you see changes when you print `l1` outside the function.
 
+# However, in the second example, `change` function reassigns the variable `ele` to a new list `[10]`, but this change does not affect the original list object referred to by `x`. This happens because reassigning `ele` creates a new reference to a different list object within the function's scope, leaving the original `x` unchanged.
+
+# To modify the original list object directly inside the function, you would need to use methods like `append`, `pop`, etc., or use index-based assignment to change specific elements.
+ 
 # NOTE: How to make sure only specific type of data is passed into a function
 def only_int_input(only_int: int):  # Only takes int input
   return only_int+10

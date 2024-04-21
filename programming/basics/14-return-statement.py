@@ -1,5 +1,5 @@
 # Functions with o/p
-def print_hello():
+def print_hello()-> str:
   return "Hello" # returns a string, replaces where the function was called.
 
 x = print_hello() # assigns the return value to x
@@ -94,7 +94,7 @@ operations = {
   "-": subtract
 }
 
-function_is = operations["+"] # function is becomes 'add' funtion , thats why can take arguments
+function_is = operations["+"] # function_is becomes 'add' funtion , thats why can take arguments
 
 x = function_is(1,2)
 print(x)

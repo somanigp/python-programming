@@ -1,5 +1,8 @@
 #Data Types
-# Complex
+# Complex : Complex numbers are a combination of real and imaginary numbers. 
+# The real part can be expressed by an integer or decimal
+# ,while the imaginary part has a square that is negative
+# Thus j = sqrt(-1) . sqrt(-9) = +-3j.
 z = 2 + 3j
 print(type(z))  # Output: <class 'complex'>
 print(z)
@@ -30,15 +33,15 @@ print(string1[::-2])  # reverse of a string , every other character as 2
 print("Hello"[0])  # allowed
 # print("Hello"[10]) # error - index out of range
 
-my_string = input("input is : ")  # input is string
+my_string = input("input is : ")  # input given is string
 print(type(my_string))  # Output: <class 'str'>
 
 num_char = len(my_string)  # length of a string
-print(type(num_char))  # Output: <class 'int'> - type check 
+print(type(num_char))  # Output: <class 'int'> - type check , length is int
 print("length ",num_char ) # way to concat string with numbers , you cant use '+'. It gives type error 
 
 # Type Casting 
-string_is = str(num_char)
+string_is = str(num_char)  # Converting to str
 print(type(string_is))  # Output: <class 'str'> - type check : This error commonly arises when you attempt to use a variable with the same name as a built-in function or method, thus overwriting the built-in functionality
 
 num_as_string = "123"
@@ -53,14 +56,26 @@ num_as_string = "0"
 num1 = 0
 num2 = 1
 print(bool(num_as_string)) # Output: <class 'bool'> - type check true
-print(bool(num1))  # Output: <class 'bool'> - type check false
+print(bool(num1))  # Output: <class 'bool'> - type check false **
 print(bool(num2))  # Output: <class 'bool'> - type check true
 
+# ** NOTE: Empty String and 0 in int gives boolean false
 # int + float = float
-print(12.5/2) # float, division o/p is always float
+print(type(12.5/2)) # float, division o/p is always float
 print(2/0.5) # float 
+
+# NOTE: If divided by zero : ZeroDivisionError: division by zero
 
 # A variable can also be None
 x = None
 print(x) # None
 print(type(x)) # <class 'NoneType'>
+
+
+# Below are all false : 
+print(bool(None))
+print(bool(0))
+print(bool(""))
+
+x = 123
+print(type(str(x))) # Type conversion to string

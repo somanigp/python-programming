@@ -45,7 +45,8 @@ def draw_sprirograph(size_of_gap: int):  # accept only integers instead of any
 
 # draw_sprirograph(5)
 
-colors = colorgram.extract('./damien-hirst-spot-painting-for-sale.jpg', 30)  # Use an image path. ./ -> current directory
+# colors = colorgram.extract('./damien-hirst-spot-painting-for-sale.jpg', 30)  # Use an image path. ./ -> current directory
+colors = colorgram.extract("C:\\Users\\soman\\OneDrive\\Desktop\\Govind's Library\\Coding\\python\\python-programming\\programming\\Object_Oriented_Programming\\Classes\\turtle\\turtle_advance\\damien-hirst-spot-painting-for-sale.jpg", 30)
 # This is for the current directory
 # print(colors)
 # first_color = colors[0]

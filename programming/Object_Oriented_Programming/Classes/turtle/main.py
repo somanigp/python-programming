@@ -2,11 +2,7 @@
 # This is preloaded with every download of Python
 
 from turtle import *  # To import all the things from turtle module we use * . This is one of the external
-# library/package.
-import another_module
-# import turtle
 
-# print(another_module.another_variable)
 timmy = Turtle()  # C - shows to represent class , timmy is object , parenthesis () is added to construct an
 # object as constructor is also a function with the same name as class name. We have fetched a class Turtle from
 # module turtle

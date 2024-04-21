@@ -1,12 +1,24 @@
 # https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
-
+# Functions: append, extend, insert, remove, pop, clear, index, count, sort, reverse
+# l1[0] = 3
+# l1.append("d")
+# l1.insert(3, "e")
+# l1 += l2
+# x = l1.pop(1) 
+# names = names_string.split(",")
+# l1.clear()
+# letter_index = abc.index("a")
+# list.remove(ele) - remove first occurence of that element
+# student_scores.sort() -> acsending order(small to big)
+# student_scores.sort(reverse=True) -> desending order(big to small)
+# maximum = max(numbers) # max and min for a list of numbers 
 
 #list  - data structure , single piece of data - variable . This is one way of saving or organizing data. to store a group of same data in a proper order.
 
 l1 = [1,2,"a", "b", "c", True]
 #print(l1[100]) - IndexError : list index out of range
-print(l1)
-print(type(l1))
+print(l1)  
+print(type(l1))  # list 
 
 print(l1[0]) # access element of a list 
 print(l1[-1]) # access last element of a list
@@ -14,7 +26,7 @@ print(l1[1:3]) # access a range of elements of a list
 print(l1[1:5:2]) # access a range of elements of a list, but every second element 
 print(l1[::-1]) # reverse a list 
 
-l1[0] = 3 # change element of a list 
+l1[0] = 3 # change element of a list on that index
 print(l1)
 # add element to a list 
 l = []
@@ -45,7 +57,8 @@ names_string = "John,Mary,Bob,Alice"
 names = names_string.split(",")
 print(names)
 
-names = names_string.split(", ")
+names = names_string.split(", ") # ['John,Mary,Bob,Alice']
+print(names)
 import random 
 length_of_names = len(names)
 random_person_index = random.randint(0,length_of_names-1) # -1 because index starts from 0

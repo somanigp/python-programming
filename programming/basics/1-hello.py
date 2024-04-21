@@ -1,4 +1,6 @@
-# Write your code below this line 👇
+# Python Documentaion = https://docs.python.org/3/tutorial/interpreter.html
+
+print("Hi"); print("Hi") # This is valid and NOTE: print has a newline at the end so 2nd Hi will be in the next line 
 print("Hello, World! \n") # \n is an escape sequence that inserts a newline 
 # "Hello, World!" is a string literal
 print("Hello World\nHello World")
@@ -23,4 +25,4 @@ print('''
       In multiple lines.
       ''')
 print('Aren\'t you a little short for a storm trooper?') # backslash before ' or " , tells to ignore that one and its part of string 
-print("What is a \"chopper\"?")
+print("What is a \"chopper\" \t?") # use \t for tab

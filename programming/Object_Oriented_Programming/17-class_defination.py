@@ -1,8 +1,14 @@
 # Class Declaration
 # NOTE: **
+
+# Packages and Modules : See coffee_machine main file and Quiz __init__.py files
 from Classes.coffee_machine.coffee_maker import CoffeeMaker  # '.' to navigate when doing imports in .py file
 # from ..higher_or_lower.art import logo  # Cant do this as relative imports are only within packages. To
 # import like this we need to change our project structure into packages.
+coffe_maker = CoffeeMaker()
+
+# import Classes   # This will give error as 'Classes' is not a package. Use from Classes import ../.coffee_maker
+# coffe_maker = Classes.coffee_machine.coffee_maker.CoffeeMaker()
 
 
 class User:  # 'class' Keyword and name in PascalCase. All Class details go inside this indented
@@ -55,23 +61,23 @@ print(user_1.followers)
 
 user_2 = User("002","raksha")
 
-user_2.follow(user_1)  # Increases user_2 followers count by 1 and this objects user_2 following by 1
+user_2.follow(user_1)  # Increases user_1 followers count by 1 and this objects user_2 following by 1
 print(user_1.followers)
 print(user_2.following)
 
 
 # NOTE : In Python, a class cannot have multiple constructors in the same way as some other programming languages (like Java or C++) where method overloading allows different constructors to have different signatures.
 
-# class MyClass:
-#     def __init__(self, param1=None, param2=None):  # If passing a value as argument this(param1=None) gets overriden.
-#         if param1 is None and param2 is None:
-#             # Default initialization
-#             self.param1 = 0
-#             self.param2 = 0
-#         else:
-#             # Custom initialization
-#             self.param1 = param1
-#             self.param2 = param2
+class MyClass:
+    def __init__(self, param1=None, param2=None):  # If passing a value as argument this(param1=None) gets overriden.
+        if param1 is None and param2 is None:
+            # Default initialization
+            self.param1 = 0
+            self.param2 = 0
+        else:
+            # Custom initialization
+            self.param1 = param1
+            self.param2 = param2
 
 # # Creating objects with different initialization options
 # obj1 = MyClass()  # Initializes with default values (0, 0)
@@ -87,44 +93,24 @@ print(user_2.following)
 # NOTE: When it shows (self,distance) -> it means it only takes one argument i.e. distance.
 # NOTE: When it shows (self) -> No argument needed
 
-# **** NOTE ****
-# You can change attributes of an object through methods inside a function like func1, but not directly change
-# attribute inside a function which is not object's method.
-
-# class Demo:
-#   def __init__(self):
-#     self.x = 10
-
-
-# demo = Demo()
-# print(demo.x)
-
-# def func1():
-#   demo.x = 20  # does change the attribute
-
-# func1()
-# print(demo.x) # prints 20
-# demo.x = 30
-# print(demo.x) # 30
-
 
 # NOTE:
-# class Demo:
-#
-#   class_variable = 10  # Class variable
-#
-#   def __init__(self, param1 = 0, param2 = 0):  # Setting default values if None passed
-#     self.x = param1
-#     self.y = param2
+class Demo:
 
-#   def x_is(self):  # self - object method , and not class
-#     return self.x
+  class_variable = 10  # Class variable
 
-#   def hello(self):
-#     print("hello" + self.class_variable)  # using class_variable.
+  def __init__(self, param1 = 0, param2 = 0):  # Setting default values if None passed
+    self.x = param1
+    self.y = param2
 
-#   def hello_2():
-#     print("hello2")
+  def x_is(self):  # self - object method , and not class
+    return self.x
+
+  def hello(self):
+    print("hello" + self.class_variable)  # using class_variable.
+
+  def hello_2():
+    print("hello2")
 
 #   def own_input(self, demo_item: 'Demo'):  # demo_item parameter should only take input which is of the same class ie demo. NOTE : '' not needed when there is any other class as requirement.
 #     return demo_item.x
@@ -154,3 +140,20 @@ print(user_2.following)
 # # 0
 # # 8
 # # 9
+
+# COUNTER
+COUNTER = 0
+
+class Counter:
+    # COUNTER doesn't work if inside class
+    def __init__(self) -> None:
+        global COUNTER
+        COUNTER += 1 
+        self.id = COUNTER
+        
+        
+obj1 = Counter()
+obj2 = Counter()
+
+print(obj1.id)
+print(obj2.id)

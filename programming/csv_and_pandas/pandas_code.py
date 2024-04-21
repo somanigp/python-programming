@@ -54,3 +54,11 @@ data_dict = {
 data = pd.DataFrame(data_dict)
 print(data)
 data.to_csv("./student_scores.csv")  # Create a csv file. Needs path as an input.
+
+# age_no_na = titanic[titanic["Age"].notna()]
+# The notna() conditional function returns a True for each row the values are not a Null value. As such, this can be combined with the selection brackets [] to filter the data table.
+# adult_names = titanic.loc[titanic["Age"] > 35, "Name"]
+# In this case, a subset of both rows and columns is made in one go and just using selection brackets [] is not sufficient anymore. The loc/iloc operators are required in front of the selection brackets []. When using loc/iloc, the part before the comma is the rows you want, and the part after the comma is the columns you want to select. 
+
+# I’m interested in rows 10 till 25 and columns 3 to 5.
+# titanic.iloc[9:25, 2:5]

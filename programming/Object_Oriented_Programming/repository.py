@@ -1,4 +1,4 @@
-# The Python Package Index (PyPI) is a repository of software for the Python programming language.
+# The Python Package Index (PyPI) is a repository of packages/software for the Python programming language.
 # https://pypi.org/ -> Homepage( Documentation and GitHub page) and ChangeLog
 
 # To use others code using packages. -> Each file in our project is a module in itself. Package -> Lots of file/modules
@@ -9,6 +9,7 @@ from prettytable import * # select 'go to' in settings and see implementations, 
 
 # Use Refactor -> Rename
 table = PrettyTable()  # Creating a object of class  PrettyTable from prettytable package.
+print(table)
 
 print(table.field_names)  # empty
 # NOTE: Attributes can be changed outside of objects methods , but avoid it generally. Use methods to change attributes, instead of doing directly
