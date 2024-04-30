@@ -28,7 +28,7 @@ else:
 # PATCH: Apply partial updates to a resource
 
 # Each method takes similar arguments as GET, with additions like data for POST and PUT:
-response_post = requests.post('https://api.example.com/users', data={'name': 'Alice'})
+response_post = requests.post('https://api.example.com/users', params={'key': 'value'}, data={'name': 'Alice'})
 response_put = requests.put('https://api.example.com/articles/123', data={'title': 'New Title'})
 
 # Authentication and Customizations:

@@ -4,3 +4,6 @@ a. conda create -n <name> python=<version>
 b. conda activate <name>
 c. conda install <package-name>
 d. conda deactivate
+
+VIRTUAL ENVIRONMENTS :
+https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html

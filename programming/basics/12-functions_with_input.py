@@ -2,9 +2,10 @@ import math # math module for mathematical calculation
 
 # Arguments and Parameters
 my_name = "Govind"
+str_or_int: str | int = 12  # Can be of type string or integer.
 
 # : str,int,bool,float,list,tuple,dict,set,None,Custom_Class_Name - type of data as input if you wanna fix input
-def greet(name: str): # name is a parameter ( name of the data )
+def greet(name: str | int): # name is a parameter ( name of the data ) ** NOTE: means input can be str or int
   print(my_name) # we can access the variable defined outside the function as function and variable are in the same SCOPE.                
   print("Hello, " + name)
 

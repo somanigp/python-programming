@@ -1,0 +1,10 @@
+{
+    "api1": {
+        "version": 0,
+        "date": "today"
+    },
+    "api2": {
+        "version": 1,
+        "date": "tmmr"
+    }
+}
