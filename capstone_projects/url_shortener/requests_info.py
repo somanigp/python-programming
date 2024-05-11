@@ -1,10 +1,13 @@
-# requests library in Python for making HTTP requests:
+# requests library in Python for making HTTP requests: https://docs.python-requests.org/en/latest/
 import requests
 
 # Make a GET request:
 # Get the response from a URL
 response = requests.get('https://api.example.com/data') # This sends a GET request to the specified URL and assigns the response object to the response variable.
 # Status code: Check the HTTP status code using response.status_code.
+
+# *** NOTE: https://www.webfx.com/web-development/glossary/http-status-codes/
+
 # Get the response content as text using response.text, as JSON using response.json(), or in other formats depending
 # on the server's response.
 # Headers: Access response headers using response.headers.
