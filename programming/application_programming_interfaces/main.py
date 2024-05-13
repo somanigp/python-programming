@@ -11,7 +11,10 @@
 import requests  # Docs: https://docs.python-requests.org/en/latest/
 import datetime as dt
 
-ISS_LOCATION_URL = "http://api.open-notify.org/iss-now.json"
+ISS_LOCATION_URL = "http://api.open-notify.org/iss-now.json"  # http or https is needed to make the call.
+# Hypertext Transfer Protocol (HTTP) is a standard protocol that governs how files are exchanged on the World Wide Web.
+# HTTPS stands for Hypertext Transfer Protocol Secure. It is the protocol where encrypted HTTP data
+# is transferred over a secure connection.
 MY_LATITUDE = 21.152451
 MY_LONGITUDE = 79.080559
 

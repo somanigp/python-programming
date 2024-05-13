@@ -3,7 +3,7 @@
 # and it is separated by ','
 
 # data = []
-# with open("weather_data.csv") as csv:
+# with open("weather_hour_data.csv") as csv:
 #     for i in csv.readlines():
 #         data.append(i.strip())
 #
