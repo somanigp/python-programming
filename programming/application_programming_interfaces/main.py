@@ -73,3 +73,19 @@ print(current_time)  # 2024-05-12 01:38:42.312524, Time : 01:38:42.312524
 hour_part_for_sunrise = int(sunrise.split("T")[1].split(":")[0])
 hour_part_for_current_time = current_time.hour
 print(hour_part_for_sunrise, hour_part_for_current_time)
+
+# import requests
+# ISS_LOCATION_URL = "http://api.open-notify.org/is-now.json"
+#
+# response = requests.get(url=ISS_LOCATION_URL)
+# # response.raise_for_status() - Dont use directly
+# try:
+#     response.raise_for_status()
+# except Exception as e:  # Do this so that the code doesn't stop and you catch all the errors too.
+#    # Error while making request: 404 Client Error: Not Found for url: http://api.open-notify.org/is-now.json
+#     print(f"Error while making request: {e}")
+# else:
+#     data = response.json()
+#     print(data)
+# finally:
+#     print("Completed")
