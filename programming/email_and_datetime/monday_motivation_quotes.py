@@ -8,7 +8,7 @@ PASSWORD = "uxmhhrbzyewbnzkd"
 
 # Getting current date:
 current_date = dt.datetime.now()
-week_day = 5  # For Monday
+week_day = 0  # For Monday
 
 # Getting a random quote:
 with open("birthday_wisher/quotes.txt", mode="r") as data_file:
