@@ -44,6 +44,8 @@ except Exception as e:
     print(f"The error occured is {e}")
 else:
     data = response.json()
+    # Could have implemented like below:
+    # data_list = [value for (_, value) in data["Time Series (Daily)"].items()]
     no_of_data = 0
     last_two_trading_days = []
     for key in data["Time Series (Daily)"]:  # Getting the first 2 items in the dictionary
@@ -71,7 +73,7 @@ if stock_data:
     response = requests.get(url="https://newsapi.org/v2/everything", params=news_params)
     response.raise_for_status()  # Can add try, expect here too
     data = response.json()["articles"][:3]
-
+    # print(data)
     # TODO 3: Use https://www.twilio.com
     # Send a seperate message with the percentage change and each article's title and description to your phone number.
     symbol_is = "🔺"
