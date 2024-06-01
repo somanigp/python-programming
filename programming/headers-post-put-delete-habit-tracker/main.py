@@ -10,7 +10,7 @@ PIXELA_API_TOKEN = "loykszJOD0ByDdAdPA8"
 # 1. **Params** (short for parameters) are typically used with **GET** requests and are appended to the request URL.
 # They are visible in the URL and are used to send simple, less sensitive data. For example, if you're requesting a
 # specific user's data, you might include the user's ID as a parameter. Parameters provide data to the server. They can
-# be used to filter, sort, or pass data to the server in a GET request. Best practice is to have token in headers
+# be used to filter, sort, or pass data to the server in a GET request. Best practice is to have token in headers_for_nutritionix
 #
 # 2. The **body** of an API request is used to send the actual request data. This is typically used with **POST** and
 # **PUT** requests, which are designed to create or update resources on the server. The body can contain more complex
@@ -49,7 +49,7 @@ PIXELA_API_TOKEN = "loykszJOD0ByDdAdPA8"
 
 # Create Graph Definition
 # create_graph_url = f"{PIXELA_URL}/v1/users/{USERNAME}/graphs"  # Way to create url
-# headers = {  # Passing Auth Key in headers
+# headers_for_nutritionix = {  # Passing Auth Key in headers_for_nutritionix
 #     "X-USER-TOKEN": PIXELA_API_TOKEN
 # }
 # request_body = {
@@ -60,7 +60,7 @@ PIXELA_API_TOKEN = "loykszJOD0ByDdAdPA8"
 #     "color": "shibafu",
 #     "timezone": "Asia/Calcutta"
 # }
-# response = requests.post(url=create_graph_url, json=request_body, headers=headers)
+# response = requests.post(url=create_graph_url, json=request_body, headers_for_nutritionix=headers_for_nutritionix)
 # response.raise_for_status()
 # print(response.text)
 
@@ -87,13 +87,13 @@ pixel_update_url = f"{PIXELA_URL}/v1/users/{USERNAME}/graphs/graph1/{current_dat
 request_body_for_update = {
     "quantity": "6"
 }
-# response = requests.put(url=pixel_update_url, headers=headers, json=request_body_for_update)
+# response = requests.put(url=pixel_update_url, headers_for_nutritionix=headers_for_nutritionix, json=request_body_for_update)
 # response.raise_for_status()
 # print(response.text)
 
 # Delete a pixel:
 # delete_pixel_url = f"{PIXELA_URL}/v1/users/{USERNAME}/graphs/graph1/{current_date.strftime('%Y%m%d')}"
-# response = requests.delete(url=delete_pixel_url, headers=headers)
+# response = requests.delete(url=delete_pixel_url, headers_for_nutritionix=headers_for_nutritionix)
 # response.raise_for_status()
 # print(response.text)
 

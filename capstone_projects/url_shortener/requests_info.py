@@ -10,7 +10,7 @@ response = requests.get('https://api.example.com/data') # This sends a GET reque
 
 # Get the response content as text using response.text, as JSON using response.json(), or in other formats depending
 # on the server's response.
-# Headers: Access response headers using response.headers.
+# Headers: Access response headers_for_nutritionix using response.headers_for_nutritionix.
 response_params = requests.get('https://api.example.com/data', params={'key': 'value'})
 
 if response.status_code == 200:
@@ -37,7 +37,7 @@ response_put = requests.put('https://api.example.com/articles/123', data={'title
 # Authentication and Customizations:
 #
 # Authentication: Use auth arguments like auth=('username', 'password') for basic authentication or refer to requests documentation for other methods.
-# Headers: Specify custom headers in the headers parameter, e.g., headers={'Authorization': 'Bearer YOUR_TOKEN'}.
+# Headers: Specify custom headers_for_nutritionix in the headers_for_nutritionix parameter, e.g., headers_for_nutritionix={'Authorization': 'Bearer YOUR_TOKEN'}.
 # Timeouts: Set timeouts using timeout to prevent hanging requests (e.g., timeout=5).
 # Proxies: Configure proxies with the proxies parameter for routing requests through proxies.
 
