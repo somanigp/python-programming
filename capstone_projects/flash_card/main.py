@@ -1,7 +1,7 @@
 from tkinter import *
 import pandas as pd
 import random
-
+# =GOOGLETRANSLATE("hola", "es", "en")
 COUNT = 3
 BACKGROUND_COLOR = "#B1DDC6"
 count_down_timer = None
