@@ -19,7 +19,7 @@ config.read(filenames='./.project_config')
 # API_KEY: str = config['workout-project']['API_KEY_NUTRITIONIX']
 # TOKEN_FOR_SHEETY: str = config['workout-project']['TOKEN_FOR_SHEETY']
 
-# Edit/...->Run with params->create config file with environment variables
+# Edit/...->Run with params->create config file with environment variables for the current file
 API_ID = os.environ.get("API_ID_NUTRITIONIX")
 API_KEY = os.environ.get("API_KEY_NUTRITIONIX")
 TOKEN_FOR_SHEETY = os.environ.get("TOKEN_FOR_SHEETY")
@@ -77,7 +77,7 @@ while is_on:
         is_on = False
     else:
         list_of_activities = exercise_text(query)
-        for activity in list_of_activities:
+        for activity in list_of_activities:  # For every activity run the test cases.
             data: dict = {
                 "tracker": {
                     "date": date_in_str,
@@ -90,7 +90,7 @@ while is_on:
             # print(data)
             response = requests.post(url=URL_FOR_SHEETY, headers=headers_for_sheety, json=data)
             response.raise_for_status()
-            result = response.json()
+            # result = response.json()
             # print(result)
 
 # NOTE: "govind somani".title()  # Govind Somani. - Title Case
